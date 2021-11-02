@@ -1,8 +1,10 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-sk7i#_o8t@qtw#nqtv0@5tmf#$jcga9p)m^-m@)*9l#4a5lzhx'
+with open('./secretkey.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 DEBUG = True
 
